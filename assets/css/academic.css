@@ -1,0 +1,132 @@
+/* Academic profile refinements for the Beautiful Jekyll theme. */
+
+body {
+  font-size: 1.08rem;
+  line-height: 1.72;
+}
+
+.navbar-custom {
+  box-shadow: 0 1px 8px rgba(16, 42, 67, 0.18);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  letter-spacing: 0.01em;
+}
+
+.intro-header .page-heading h1 {
+  font-size: clamp(2.35rem, 6vw, 3.7rem);
+  letter-spacing: -0.025em;
+}
+
+.intro-header .page-heading .page-subheading {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.profile-intro {
+  display: grid;
+  grid-template-columns: minmax(190px, 250px) 1fr;
+  gap: 2.6rem;
+  align-items: start;
+  margin: 0.5rem 0 2.5rem;
+}
+
+.profile-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(16, 42, 67, 0.18);
+}
+
+.lead {
+  color: #102a43;
+  font-size: 1.3rem;
+  line-height: 1.55;
+}
+
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1.5rem;
+}
+
+.profile-links a {
+  border: 1px solid #b8c8d4;
+  border-radius: 999px;
+  padding: 0.32rem 0.8rem;
+  text-decoration: none;
+}
+
+.profile-links a:hover {
+  background: #e7f2f2;
+  border-color: #176b73;
+}
+
+.section-rule {
+  border: 0;
+  border-top: 1px solid #d9e2ec;
+  margin: 2.75rem 0;
+}
+
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 1.4rem 0 3rem;
+}
+
+.research-card {
+  background: #f3f7f7;
+  border-left: 4px solid #176b73;
+  border-radius: 0 8px 8px 0;
+  padding: 1.2rem 1.35rem;
+}
+
+.research-card h3,
+.publication-item h3 {
+  color: #102a43;
+  font-size: 1.18rem;
+  margin: 0 0 0.45rem;
+}
+
+.research-card p,
+.publication-item p {
+  margin: 0.35rem 0;
+}
+
+.publication-item {
+  border-bottom: 1px solid #d9e2ec;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.35rem;
+}
+
+.publication-item:last-of-type {
+  border-bottom: 0;
+}
+
+.text-link {
+  font-weight: 600;
+}
+
+footer {
+  border-top: 0;
+}
+
+@media (max-width: 768px) {
+  .profile-intro {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .profile-photo {
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
+}
