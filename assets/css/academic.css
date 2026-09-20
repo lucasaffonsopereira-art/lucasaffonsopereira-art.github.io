@@ -205,3 +205,12 @@ body {
   font-weight: 400;
   letter-spacing: 0.02em;
 }
+
+
+/* Use Novante across the site, with browser-synthesized bold weight. */
+body,
+body *:not(i):not(svg) {
+  font-family: "Novante Regular", Georgia, serif !important;
+  font-weight: 700 !important;
+  font-synthesis: weight;
+}
