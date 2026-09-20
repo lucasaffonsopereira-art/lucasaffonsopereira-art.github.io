@@ -14,6 +14,42 @@ body {
   letter-spacing: 0.01em;
 }
 
+/* Keep the expandable Research label aligned with the other nav links. */
+.navbar-custom .navbar-nav button.nav-link {
+  font-size: inherit;
+  background: transparent;
+  border: 0;
+  color: var(--navbar-text-col);
+  cursor: pointer;
+  text-align: left;
+}
+
+.navbar-custom .navbar-nav .nav-item.section-active > .nav-link,
+.navbar-custom .navbar-nav .nav-item.active > .nav-link {
+  box-shadow: inset 0 -2px 0 currentColor;
+}
+
+.navbar-custom .nav-item.dropdown .dropdown-menu {
+  min-width: 12rem;
+}
+
+.navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item.active,
+.navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item:hover,
+.navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item:focus {
+  background-color: rgba(255, 255, 255, 0.14);
+  color: var(--navbar-text-col);
+}
+
+.navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item.active {
+  font-weight: 600;
+}
+
+.navbar-custom .navbar-nav .nav-link:focus-visible,
+.navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item:focus-visible {
+  outline: 2px solid var(--navbar-text-col);
+  outline-offset: -2px;
+}
+
 .intro-header .page-heading h1 {
   font-size: clamp(2.5rem, 4.5vw, 3.4rem);
   letter-spacing: 0.035em;
@@ -198,7 +234,7 @@ body {
   font-display: swap;
 }
 
-/* Typography: Source Sans 3 for reading; Novante Regular for display. */
+/* Typography: Source Sans 3 for reading; Novante for display. */
 :root {
   --font-display: "Novante Regular", Georgia, serif;
   --font-body: "Source Sans 3", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -229,9 +265,10 @@ h1, h2, h3, h4, h5, h6 {
 main h1,
 main h2:not(.post-title) {
   font-family: var(--font-display);
-  font-weight: 400;
+  /* Only Regular is licensed here; the browser synthesizes this bold weight. */
+  font-weight: 700;
   font-style: normal;
-  font-synthesis: none;
+  font-synthesis: weight;
   line-height: 1.1;
   letter-spacing: 0.035em;
 }
