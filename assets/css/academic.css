@@ -536,3 +536,9 @@ footer, footer .copyright, footer .theme-by, footer .footer-custom-content {
   .navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item { white-space: normal; }
   .intro-header:not(.big-img) { margin-top: 5.25rem; }
 }
+
+
+@media (max-width: 1199px) {
+  /* The floating navbar avatar overlaps page titles at narrow widths. */
+  .navbar-custom .avatar-container { display: none; }
+}
