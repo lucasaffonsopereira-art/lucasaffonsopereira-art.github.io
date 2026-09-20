@@ -542,3 +542,27 @@ footer, footer .copyright, footer .theme-by, footer .footer-custom-content {
   /* The floating navbar avatar overlaps page titles at narrow widths. */
   .navbar-custom .avatar-container { display: none; }
 }
+
+
+/* About-page hierarchy: align the biography with the portrait frame. */
+@media (min-width: 769px) {
+  .profile-intro {
+    grid-template-columns: minmax(190px, 250px) minmax(0, 1fr);
+    column-gap: clamp(1.75rem, 3.2vw, 2.5rem);
+  }
+}
+
+.profile-intro > div { min-width: 0; }
+.profile-intro .lead { margin-top: 0; }
+
+body:has(.profile-intro) .intro-header .page-heading .page-subheading {
+  color: #405661;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.8vw, 2.25rem);
+  font-weight: 400;
+  font-style: normal;
+  font-synthesis: none;
+  line-height: 1.15;
+  letter-spacing: 0.025em;
+  margin: 0.8rem 0 0.3rem;
+}
