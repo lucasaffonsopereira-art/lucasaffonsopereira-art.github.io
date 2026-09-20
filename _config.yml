@@ -25,10 +25,10 @@ author: Lucas Affonso
 
 navbar-links:
   About: "/"
-  Research: "research"
-  Publications: "publications"
+  Research:
+    - Publications: "publications"
+    - Research interests: "research"
   Teaching: "teaching"
-  CV: "cv"
 
 ################
 # --- Logo --- #
@@ -125,7 +125,7 @@ edit_page_button: false
 # Allow sub-menu items (second-level navigation menu items) to be longer than the top-level menu
 # If this setting is off, then long sub-menu words might get cut off
 # See https://github.com/daattali/beautiful-jekyll/issues/765 to understand the issue this setting can solve
-navbar-var-length: false
+navbar-var-length: true
 
 # The keywords to associate with your website, for SEO purposes
 #keywords: "my,list,of,keywords"
@@ -160,7 +160,7 @@ footer-hover-col: "#9FB3C8"
 
 # For any extra visual customization, you can include additional CSS files in every page on your site. List any custom CSS files here
 site-css:
-  - "/assets/css/academic.css?v=20260920-academic-type"
+  - "/assets/css/academic.css?v=20260920-research-nav"
 
 # If you have common JavaScript files that should be included in every page, list them here
 #site-js:

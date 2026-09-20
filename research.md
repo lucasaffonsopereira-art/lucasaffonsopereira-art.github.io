@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Research
+title: Research interests
 subtitle: Rigorous approaches to classical and quantum statistical mechanics
 permalink: /research/
 ---
