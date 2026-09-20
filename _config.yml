@@ -47,15 +47,12 @@ round-avatar: true
 
 
 #####################################
-# --- Footer social media links --- #
+# --- About-page contact and profile URLs --- #
 #####################################
 
-# Select the social network links that you want to show in the footer.
-# You can change the order that they show up on the page by changing the order here.
-# Uncomment the links you want to show and add your information to each one.
+# These values supply the About-page email and labeled academic links.
 social-network-links:
   email: "lucas.affonso.pereira@gmail.com"
-  github: lucasaffonsopereira-art
   ORCID: 0000-0002-3740-2834
   google-scholar: CBXKnz0AAAAJ
 #  medium: yourname
@@ -160,7 +157,7 @@ footer-hover-col: "#9FB3C8"
 
 # For any extra visual customization, you can include additional CSS files in every page on your site. List any custom CSS files here
 site-css:
-  - "/assets/css/academic.css?v=20260920-about-refine1"
+  - "/assets/css/academic.css?v=20260920-profiles1"
 
 # If you have common JavaScript files that should be included in every page, list them here
 #site-js:
