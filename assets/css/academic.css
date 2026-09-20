@@ -164,14 +164,14 @@ footer {
 }
 
 
-/* Woven canvas texture sampled from the supplied reference image. */
+/* Subtle woven-canvas treatment inspired by the supplied reference. */
 body {
   background-color: #fafaf8;
   background-image:
-    linear-gradient(rgba(250, 250, 248, 0.24), rgba(250, 250, 248, 0.24)),
-    url("../img/canvas-tile.png");
+    repeating-linear-gradient(45deg, rgba(89, 103, 113, .045) 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(-45deg, rgba(89, 103, 113, .03) 0 1px, transparent 1px 3px);
   background-repeat: repeat;
-  background-size: auto, 24px 24px;
+  background-size: auto;
 }
 
 .research-photo {
