@@ -28,7 +28,7 @@ navbar-links:
   Research: "research"
   Publications: "publications"
   Teaching: "teaching"
-  CV: "https://drive.google.com/file/d/1BDo4VqfZSpJgvKaAjPahjx5gFmDJyDAw/view"
+  CV: "cv"
 
 ################
 # --- Logo --- #
@@ -36,7 +36,7 @@ navbar-links:
 
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/assets/img/lucas-affonso-profile.jpg"
+avatar: "/assets/lucas-affonso-cv-photo.jpg"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
 round-avatar: true
