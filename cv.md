@@ -24,10 +24,8 @@ show-avatar: false
 - **Research:** Long-range Ising and other spin models, contour methods, cluster expansions, phase transitions, correlation decay, and quantum statistical mechanics.
 - **Teaching:** Instructor for courses on Poisson point processes in statistical mechanics and long-range Ising models at IME-USP.
 
-For papers and preprints, see my [publications page]({{ '/publications' | relative_url }}). The document below contains the complete CV, including talks, teaching, fellowships, and publications.
+For papers and preprints, see my [publications page]({{ '/publications' | relative_url }}).
 
 ## Full CV
 
-<iframe class="cv-document" src="{{ '/assets/Lucas_Affonso_CV_2027.pdf' | relative_url }}#view=FitH" title="Full curriculum vitae of Lucas Affonso"></iframe>
-
-<p>If the preview does not appear on your device, <a href="{{ '/assets/Lucas_Affonso_CV_2027.pdf' | relative_url }}">open the full CV PDF</a>.</p>
+The [complete CV (PDF)]({{ '/assets/Lucas_Affonso_CV_2027.pdf' | relative_url }}) includes publications, preprints, talks, teaching, fellowships, and languages.
