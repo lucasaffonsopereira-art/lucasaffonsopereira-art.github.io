@@ -74,11 +74,13 @@ body {
 }
 
 .profile-photo {
+  display: block;
   width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 10px 30px rgba(16, 42, 67, 0.18);
+  height: auto;
+  padding: 8px;
+  border: 1px solid #dedbd5;
+  background: #fffdfa;
+  box-shadow: 0 8px 24px rgba(16, 42, 67, 0.10);
 }
 
 .lead {
@@ -270,10 +272,10 @@ h1, h2, h3, h4, h5, h6 {
 main h1,
 main h2:not(.post-title) {
   font-family: var(--font-display);
-  /* Only Regular is licensed here; the browser synthesizes this bold weight. */
-  font-weight: 700;
+  /* The repository contains only Novante Regular. */
+  font-weight: 400;
   font-style: normal;
-  font-synthesis: weight;
+  font-synthesis: none;
   line-height: 1.1;
   letter-spacing: 0.035em;
 }
@@ -343,4 +345,194 @@ footer, footer .copyright, footer .theme-by, footer .footer-custom-content {
 @media (max-width: 768px) {
   body { font-size: 1.05rem; }
   .lead { font-size: 1.18rem; }
+}
+
+/* Compact, content-aligned site navigation. */
+.navbar-custom,
+.navbar-custom.top-nav-short,
+.navbar-custom.top-nav-short-permanent {
+  padding: 0 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 1px 2px rgba(16, 42, 67, 0.08);
+}
+
+.navbar-custom .navbar-inner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 730px;
+  min-height: 100px;
+  margin: 0 auto;
+  transition: min-height 180ms ease;
+}
+
+.navbar-custom .navbar-brand {
+  margin-right: 1.5rem;
+  padding: 0;
+  color: var(--navbar-text-col);
+  font-family: var(--font-display);
+  font-size: 1.875rem;
+  font-weight: 400;
+  font-style: normal;
+  font-synthesis: none;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.navbar-custom .navbar-collapse {
+  align-items: center;
+}
+
+.navbar-custom .navbar-nav {
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.navbar-custom .navbar-nav .nav-item {
+  font-size: 1.0625rem;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  color: var(--navbar-text-col);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.4;
+  transition: color 180ms ease;
+}
+
+.navbar-custom .navbar-nav .nav-label {
+  position: relative;
+  display: inline-block;
+}
+
+.navbar-custom .navbar-nav .nav-label::after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  bottom: -9px;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 180ms ease;
+}
+
+.navbar-custom .nav-item.active > .nav-link .nav-label::after,
+.navbar-custom .nav-item.section-active > .nav-link .nav-label::after,
+.navbar-custom .nav-link:hover .nav-label::after,
+.navbar-custom .nav-link:focus-visible .nav-label::after {
+  transform: scaleX(1);
+}
+
+.navbar-custom .navbar-nav .nav-item.active > .nav-link,
+.navbar-custom .navbar-nav .nav-item.section-active > .nav-link {
+  box-shadow: none;
+}
+
+.navbar-custom .navbar-nav .nav-link:focus-visible {
+  outline: 2px solid var(--navbar-text-col);
+  outline-offset: 4px;
+}
+
+.navbar-custom .nav-item.dropdown:hover,
+.navbar-custom .nav-item.dropdown.show {
+  background: transparent;
+}
+
+.navbar-custom .nav-item.dropdown .dropdown-toggle::after {
+  margin-left: 0.4em;
+  border-width: 0.3em 0.3em 0;
+  vertical-align: middle;
+}
+
+.navbar-custom .nav-item.dropdown .dropdown-menu {
+  width: max-content;
+  min-width: 12rem;
+  margin-top: 0.75rem;
+  padding: 0.3rem 0;
+  border: 1px solid #d9e2ec;
+  border-radius: 4px;
+  background: #fffdfa;
+  box-shadow: 0 6px 18px rgba(16, 42, 67, 0.12);
+}
+
+.navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item {
+  padding: 0.55rem 0.8rem;
+  border: 0;
+  background: transparent;
+  color: #102a43;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  white-space: nowrap;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item:hover,
+.navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item:focus {
+  background: #e7f2f2;
+  color: #102a43;
+}
+
+.navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item:focus-visible {
+  outline: 2px solid #176b73;
+  outline-offset: -2px;
+}
+
+.navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item.active,
+.navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item.active:hover,
+.navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item.active:focus {
+  background: #24445d;
+  color: #fff;
+  font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+  .navbar-custom.top-nav-short .navbar-inner { min-height: 72px; }
+  .intro-header:not(.big-img) { margin-top: 7.5rem; }
+}
+
+@media (max-width: 1199px) {
+  .navbar-custom .navbar-inner {
+    min-height: 68px;
+    flex-wrap: wrap;
+  }
+
+  .navbar-custom .navbar-brand { font-size: 1.5rem; }
+  .navbar-custom .navbar-toggler { margin: 0 0 0 auto; }
+  .navbar-custom .navbar-collapse {
+    flex-basis: 100%;
+    margin: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  .navbar-custom .navbar-nav {
+    align-items: stretch;
+    gap: 0;
+    padding: 0.4rem 0 0.7rem;
+  }
+
+  .navbar-custom .navbar-nav .nav-link {
+    display: flex;
+    width: 100%;
+    padding: 0.65rem 0;
+  }
+
+  .navbar-custom .navbar-nav .nav-label::after { bottom: -5px; }
+  .navbar-custom .nav-item.dropdown .dropdown-menu {
+    width: 100%;
+    min-width: 0;
+    margin: 0.2rem 0 0.4rem;
+    box-shadow: none;
+  }
+  .navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item { white-space: normal; }
+  .intro-header:not(.big-img) { margin-top: 5.25rem; }
 }
