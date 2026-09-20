@@ -7,6 +7,11 @@ permalink: /research/
 
 ## Long-range classical spin systems
 
+<figure class="research-photo">
+  <img src="{{ '/assets/img/research-lookout.jpg' | relative_url }}" alt="Stone lookout above the sea, framed by curved white walls beneath a cloudy sky" width="1200" height="1600" loading="lazy" decoding="async">
+</figure>
+
+
 My main line of work concerns phase transitions in long-range lattice models. A recurring problem is that interactions couple distant regions strongly enough that standard nearest-neighbour contour arguments no longer localize cleanly. I use multiscale contours, inspired by the Fröhlich–Spencer method, to recover the geometric and energetic control needed for Peierls arguments and cluster expansions.
 
 This program includes long-range Ising, Potts, and clock models; random fields and decaying external fields; and the low-temperature decay of truncated correlations. I am also interested in probabilistic representations that can extend these methods beyond the regimes accessible to direct contour estimates.
