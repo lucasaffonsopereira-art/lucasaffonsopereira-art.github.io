@@ -188,3 +188,20 @@ body {
 @media (max-width: 768px) {
   .research-photo { float: none; width: min(100%, 300px); margin: 1rem auto 2rem; }
 }
+
+
+@font-face {
+  font-family: "Novante Regular";
+  src: url("../Novante-Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+.intro-header .page-heading h1,
+.intro-header .post-heading h1,
+.navbar-custom .navbar-brand {
+  font-family: "Novante Regular", Georgia, serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
