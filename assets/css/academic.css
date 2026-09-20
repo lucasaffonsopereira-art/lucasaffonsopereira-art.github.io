@@ -566,3 +566,33 @@ body:has(.profile-intro) .intro-header .page-heading .page-subheading {
   letter-spacing: 0.025em;
   margin: 0.8rem 0 0.3rem;
 }
+
+
+/* Small, labeled academic links beside the About-page contact details. */
+.academic-profiles {
+  margin: 0.65rem 0 1.15rem;
+  color: #526670;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.academic-profiles a {
+  color: #176b73;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: rgba(23, 107, 115, 0.45);
+  text-underline-offset: 0.16em;
+}
+
+.academic-profiles a:hover {
+  color: #0b4f56;
+  text-decoration-color: currentColor;
+}
+
+.academic-profiles a:focus-visible,
+.profile-intro a[href^="mailto:"]:focus-visible {
+  outline: 2px solid #176b73;
+  outline-offset: 3px;
+}
