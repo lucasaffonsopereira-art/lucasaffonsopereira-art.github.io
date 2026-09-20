@@ -12,21 +12,37 @@
 
   <div class="collapse navbar-collapse" id="main-navbar">
     <ul class="navbar-nav ml-auto">
+      {%- assign current_path = page.url | replace: 'index.html', '' -%}
       {%- for link in site.navbar-links -%}
         {%- if link[1].first %}
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link[0] }}</a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          {%- assign menu_id = link[0] | slugify -%}
+          {%- assign menu_active = false -%}
+          {%- for childlink in link[1] -%}
+            {%- for linkparts in childlink -%}
+              {%- assign child_path = linkparts[1] | relative_url | append: '/' -%}
+              {%- if current_path == child_path -%}
+                {%- assign menu_active = true -%}
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endfor %}
+          <li class="nav-item dropdown{% if menu_active %} section-active{% endif %}">
+            <button class="nav-link dropdown-toggle" type="button" id="{{ menu_id }}-menu-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="{{ menu_id }}-submenu">{{ link[0] }}</button>
+            <div class="dropdown-menu dropdown-menu-right" id="{{ menu_id }}-submenu" aria-labelledby="{{ menu_id }}-menu-toggle">
               {%- for childlink in link[1] -%}
                 {%- for linkparts in childlink %}
-                  <a class="dropdown-item" href="{{ linkparts[1] | relative_url }}">{{ linkparts[0] }}</a>
+                  {%- assign child_url = linkparts[1] | relative_url -%}
+                  {%- assign child_path = child_url | append: '/' -%}
+                  <a class="dropdown-item{% if current_path == child_path %} active{% endif %}" href="{{ child_url }}"{% if current_path == child_path %} aria-current="page"{% endif %}>{{ linkparts[0] }}</a>
                 {%- endfor -%}
               {%- endfor %}
             </div>
           </li>
         {% else %}
-          <li class="nav-item">
-            <a class="nav-link" href="{{ link[1] | relative_url }}">{{ link[0] }}</a>
+          {%- assign link_url = link[1] | relative_url -%}
+          {%- assign link_path = link_url | append: '/' -%}
+          {%- if link_url == '/' -%}{%- assign link_path = '/' -%}{%- endif %}
+          <li class="nav-item{% if current_path == link_path %} active{% endif %}">
+            <a class="nav-link" href="{{ link_url }}"{% if current_path == link_path %} aria-current="page"{% endif %}>{{ link[0] }}</a>
           </li>
         {%- endif -%}
       {%- endfor -%}
