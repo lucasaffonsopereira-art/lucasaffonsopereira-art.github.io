@@ -596,3 +596,95 @@ body:has(.profile-intro) .intro-header .page-heading .page-subheading {
   outline: 2px solid #176b73;
   outline-offset: 3px;
 }
+
+
+/* Teaching page: keep future offerings visible and archive earlier courses. */
+.teaching-upcoming,
+.teaching-archive {
+  max-width: 72ch;
+}
+
+.teaching-upcoming {
+  margin-bottom: 2.75rem;
+}
+
+.teaching-upcoming p {
+  color: #526670;
+}
+
+.course-archive {
+  margin: 1rem 0 2.75rem;
+  border-top: 1px solid #c8d4da;
+  border-bottom: 1px solid #c8d4da;
+}
+
+.course-archive summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 0;
+  color: #176b73;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 600;
+  list-style: none;
+}
+
+.course-archive summary::-webkit-details-marker {
+  display: none;
+}
+
+.course-archive summary::after {
+  content: "+";
+  flex: 0 0 auto;
+  font-size: 1.35rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.course-archive[open] summary::after {
+  content: "–";
+}
+
+.course-archive summary:hover {
+  color: #0b4f56;
+}
+
+.course-archive summary:focus-visible {
+  outline: 2px solid #176b73;
+  outline-offset: 4px;
+}
+
+.course-archive-content {
+  padding: 0.25rem 0 1.35rem;
+}
+
+.course-archive-content h3 {
+  margin: 1.5rem 0 0.75rem;
+  font-size: 1.2rem;
+}
+
+.course-entry {
+  padding: 0.85rem 0;
+}
+
+.course-entry + .course-entry {
+  border-top: 1px solid #d9e2ec;
+}
+
+.course-entry h4 {
+  margin: 0 0 0.35rem;
+}
+
+.course-entry p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .course-archive summary {
+    align-items: flex-start;
+    font-size: 1rem;
+  }
+}
