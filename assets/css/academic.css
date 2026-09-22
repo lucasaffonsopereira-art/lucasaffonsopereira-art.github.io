@@ -218,18 +218,18 @@ body {
 }
 
 .research-photo {
-  float: right;
-  width: min(35%, 270px);
-  margin: 0.25rem 0 1.35rem 2rem;
+  width: min(100%, 360px);
+  
+  margin: 1rem auto 2.75rem;
   padding: 8px;
   border: 1px solid #dedbd5;
   background: #fffdfa;
   box-shadow: 0 8px 24px rgba(16, 42, 67, 0.10);
 }
 .research-photo img { display: block; width: 100%; height: auto; }
-#quantum-statistical-mechanics { clear: both; }
+
 @media (max-width: 768px) {
-  .research-photo { float: none; width: min(100%, 300px); margin: 1rem auto 2rem; }
+  .research-photo { width: min(100%, 320px); margin: 0.75rem auto 2.25rem; }
 }
 
 
