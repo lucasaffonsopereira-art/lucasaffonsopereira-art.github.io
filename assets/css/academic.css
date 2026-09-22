@@ -688,3 +688,64 @@ body:has(.profile-intro) .intro-header .page-heading .page-subheading {
     font-size: 1rem;
   }
 }
+
+
+/* Upcoming minicourse announcement. */
+.upcoming-course {
+  margin-top: 1rem;
+  padding: 1.25rem 0 1.35rem;
+  border-top: 1px solid #c8d4da;
+  border-bottom: 1px solid #c8d4da;
+}
+
+.upcoming-course .course-kicker {
+  margin: 0 0 0.55rem;
+  color: #176b73;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.015em;
+}
+
+.upcoming-course h3 {
+  margin: 0 0 0.65rem;
+  font-family: var(--font-body);
+  font-size: clamp(1.25rem, 2.2vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.upcoming-course > p:not(.course-kicker):not(.course-links) {
+  margin: 0;
+}
+
+.upcoming-course .course-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.7rem;
+  margin: 0.85rem 0 0;
+  font-size: 1rem;
+}
+
+.upcoming-course .course-links a {
+  color: #176b73;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: rgba(23, 107, 115, 0.45);
+  text-underline-offset: 0.16em;
+}
+
+.upcoming-course .course-links a:hover {
+  color: #0b4f56;
+  text-decoration-color: currentColor;
+}
+
+.upcoming-course .course-links a:focus-visible {
+  outline: 2px solid #176b73;
+  outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  .upcoming-course {
+    padding: 1.05rem 0 1.15rem;
+  }
+}
