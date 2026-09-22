@@ -157,7 +157,7 @@ footer-hover-col: "#9FB3C8"
 
 # For any extra visual customization, you can include additional CSS files in every page on your site. List any custom CSS files here
 site-css:
-  - "/assets/css/academic.css?v=20260922-upcoming1"
+  - "/assets/css/academic.css?v=20260922-research1"
 
 # If you have common JavaScript files that should be included in every page, list them here
 #site-js:
