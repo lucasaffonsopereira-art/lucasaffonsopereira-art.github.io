@@ -7,7 +7,13 @@ permalink: /teaching/
 
 <section class="teaching-upcoming" aria-labelledby="upcoming-courses">
   <h2 id="upcoming-courses">Upcoming courses</h2>
-  <p>New courses and lecture series will be announced here.</p>
+
+  <article class="upcoming-course">
+    <p class="course-kicker">Minicourse · 2027 ICMC-USP Summer Program in Mathematics</p>
+    <h3>Analyticity in Statistical Mechanics and the Lee–Yang Theorem</h3>
+    <p>This in-person minicourse will take place at ICMC-USP in São Carlos, Brazil. The Summer Program runs from 4 January to 5 February 2027; the minicourse dates, time, and room will be announced by the organizers.</p>
+    <p class="course-links"><a href="https://verao.icmc.usp.br/atividades#h.8h3f4ogxbm4d" aria-label="View the official 2027 ICMC-USP Summer Program activity list in Portuguese">Official programme <span class="link-language">(in Portuguese)</span></a><span aria-hidden="true">·</span><a href="https://drive.google.com/file/d/13VAJ1TVVA9XNrcdw_Cl_bXXjD0dUyRG9/view?usp=sharing" aria-label="Read the course syllabus in Portuguese">Course syllabus <span class="link-language">(in Portuguese)</span></a></p>
+  </article>
 </section>
 
 <section class="teaching-archive" aria-labelledby="previous-courses">
