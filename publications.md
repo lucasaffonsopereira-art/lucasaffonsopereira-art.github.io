@@ -5,7 +5,7 @@ subtitle: Papers and preprints
 permalink: /publications/
 ---
 
-## Published
+## Published and forthcoming
 
 <div class="publication-item">
 <h3>Long-Range Ising Models: Contours, Phase Transitions and Decaying Fields</h3>
@@ -14,13 +14,14 @@ permalink: /publications/
 <p><a href="https://ems.press/journals/jems/articles/14298243">Journal</a> · <a href="https://arxiv.org/abs/2105.06103">arXiv</a></p>
 </div>
 
-## Preprints
-
 <div class="publication-item">
 <h3>Cluster Expansion and Decay of Correlations for Multidimensional Long-Range Ising Models</h3>
 <p>Lucas Affonso, Rodrigo Bissacot, João Maia, João F. Rodrigues, and Kelvyn Welsch.</p>
-<p><a href="https://arxiv.org/abs/2508.15666">arXiv:2508.15666</a></p>
+<p><em>Probability and Mathematical Physics</em> (to appear).</p>
+<p><a href="https://msp.org/soon/coming.php?jpath=pmp">Forthcoming listing</a> · <a href="https://arxiv.org/abs/2508.15666">arXiv:2508.15666</a></p>
 </div>
+
+## Preprints
 
 <div class="publication-item">
 <h3>Phase Transitions on 1d Long-Range Ising Models with Decaying Fields: A Direct Proof via Contours</h3>
